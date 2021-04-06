@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('contato', 'App\Http\Controllers\ContatoController');
+Route::apiResource('tel', 'App\Http\Controllers\TelController');
+Route::apiResource('end', 'App\Http\Controllers\EndController');
